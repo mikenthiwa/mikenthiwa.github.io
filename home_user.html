@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 		<link rel="stylesheet" href="index.css">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -45,19 +46,22 @@
 						<td>1</td>
 						<td>Syokimau - Nairobi</td>
 					</tr>
-					<tr class="metadata">
-					<td></td>
-					<td></td>
-					<td><a href="#">Micheal Mutua</a></td>
-					<td>7:00am</td>
-					<td>Call</a></td>
-					</tr>
-					<tr class="metadata">
-					<td></td>
-					<td></td>
-					<td><a href="#">Collins Injera</a></td>
-					<td>7:00am</td>
-					<td>Call</td>
+						<tr class="metadata">
+						<td class="check"></td>
+						<td></td>
+						<td><a href="#">Micheal Mutua</a></td>
+						<td>7:00am</td>
+						<td class="call">Call</a></td>
+						<td>Cancel</td>
+						</tr>
+						<tr class="metadata">
+						<td class="check"></td>
+						<td></td>
+						<td><a href="#">Collins Injera</a></td>
+						<td>7:00am</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>	
+						
 					</tr>
 				</tbody>
 				
@@ -67,18 +71,20 @@
 						<td>Nairobi - Westlands</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td><a href="#">Ted Kavoo</a></td>
 						<td>8:00am</td>
-						<td>Call</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>
 					</tr>
 					<tr class="metadata">
 						<td></td>
 						<td></td>
 						<td><a href="#">Chris Martin</a></td>
 						<td>8:00am</td>
-						<td>Call</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>
 					</tr>
 					
 				</tbody>
@@ -89,18 +95,20 @@
 						<td>Thika - All Soaps</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td><a href="#">Rick Ross</a></td>
 						<td>8:00am</td>
-						<td>Call</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td><a href="#">Quade Cooper</a></td>
 						<td>8:00am</td>
-						<td>Call</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>
 					</tr>
 				</tbody>
 				<tbody>
@@ -109,18 +117,20 @@
 						<td>Nakuru - Westlands</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td>Joe Mfalme</td>
 						<td>1:00am</td>
 						<td>Call</td>
+						<td>Cancel</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td>Rob Willims</td>
 						<td>1:00am</td>
-						<td>Call</td>
+						<td class="call">Call</td>
+						<td>Cancel</td>
 					</tr>
 				</tbody>
 				<tbody>
@@ -129,18 +139,20 @@
 						<td><a href="#">Langata - Nairobi West</a></td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td><a href="#">Regina Ndoti</a></td>
 						<td><a href="#">3:00am</a></td>
-						<td><a href="#">Call</a></td>
+						<td class="call"><a href="#">Call</a></td>
+						<td>Cancel</td>
 					</tr>
 					<tr class="metadata">
-						<td></td>
+						<td class="check"></td>
 						<td></td>
 						<td><a href="#">Chris Kirubi</a></td>
 						<td><a href="#">3:00am</a></td>
-						<td><a href="#">Call</a></td>
+						<td class="call"><a href="#">Call</a></td>
+						<td>Cancel</td>
 					</tr>
 				</tbody>
 			</table>	
@@ -158,11 +170,17 @@
 		
 		//collapse and expand sections
 		$('.breakrow').click(function(){
-			//$(this).nextUntil('tr.breakrow').slideToggle(200);
+			
 			$(this).nextUntil('tr.breakrow').animate({height: "toggle", opacity: "toggle"}, "slow");
 		})
-		}
-	)
+	})
+		
+	$(document).ready(function() {
+		$('.check').click(function(){
+				$(this).nextUntil('tr.call').css("color", "green" );
+						
+		})
+})
 </script>
 
 </body>
